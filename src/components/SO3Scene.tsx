@@ -104,10 +104,11 @@ function SceneContent({ R0, R1, Rs, overlayRs, overlayColor, activeTarget, isDra
 
   return (
     <>
-      <group ref={ref0}><PoseObject color="#4a9eff" opacity={0.6} /></group>
-      <group ref={ref1}><PoseObject color="#ff6b6b" opacity={0.6} /></group>
-      <group ref={refS}><PoseObject color="#51cf66" opacity={1} /></group>
-      {overlayRs && <group ref={refO}><PoseObject color={overlayColor} opacity={0.7} wireframe /></group>}
+      {/* Spread objects along X so start / interpolated / end are visually distinct */}
+      <group position={[-3, 0, 0]}><group ref={ref0}><PoseObject color="#4a9eff" opacity={0.6} /></group></group>
+      <group position={[ 3, 0, 0]}><group ref={ref1}><PoseObject color="#ff6b6b" opacity={0.6} /></group></group>
+      <group position={[ 0, 0, 0]}><group ref={refS}><PoseObject color="#51cf66" opacity={1}   /></group></group>
+      {overlayRs && <group position={[0, 0, 0]}><group ref={refO}><PoseObject color={overlayColor} opacity={0.7} wireframe /></group></group>}
 
       <TransformControls
         ref={controlsRef}
