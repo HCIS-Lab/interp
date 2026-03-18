@@ -119,13 +119,13 @@ export default function SO3Scene({ R0, R1, Rs, onR0Change, onR1Change }: Props) 
       <div style={{ display: 'flex', gap: 8, marginTop: 8, flexWrap: 'wrap' }}>
         <button
           onClick={() => setActiveTarget('start')}
-          style={{ borderColor: '#4a9eff', color: activeTarget === 'start' ? '#000' : '#4a9eff', background: activeTarget === 'start' ? '#4a9eff' : undefined }}
+          style={{ borderColor: '#4a9eff', color: activeTarget === 'start' ? '#fff' : '#4a9eff', background: activeTarget === 'start' ? '#4a9eff' : undefined }}
         >
           Gizmo: Start (blue)
         </button>
         <button
           onClick={() => setActiveTarget('end')}
-          style={{ borderColor: '#ff6b6b', color: activeTarget === 'end' ? '#000' : '#ff6b6b', background: activeTarget === 'end' ? '#ff6b6b' : undefined }}
+          style={{ borderColor: '#ff6b6b', color: activeTarget === 'end' ? '#fff' : '#ff6b6b', background: activeTarget === 'end' ? '#ff6b6b' : undefined }}
         >
           Gizmo: End (red)
         </button>

@@ -1,22 +1,22 @@
 /* Global styles and CSS variables */
 
 :root {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --bg-panel: #1e2632;
-  --bg-formula: #1a2332;
-  --accent-blue: #4a9eff;
-  --accent-red: #ff6b6b;
-  --accent-green: #51cf66;
-  --accent-yellow: #ffd43b;
-  --accent-purple: #cc5de8;
-  --text-primary: #e6edf3;
-  --text-secondary: #8b949e;
-  --text-muted: #484f58;
-  --border: #30363d;
+  --bg-primary: #f7f8fc;
+  --bg-secondary: #ffffff;
+  --bg-panel: #ffffff;
+  --bg-formula: #eef2ff;
+  --accent-blue: #2563eb;
+  --accent-red: #dc2626;
+  --accent-green: #16a34a;
+  --accent-yellow: #d97706;
+  --accent-purple: #9333ea;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --border: #e5e7eb;
   --nav-width: 220px;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 *, *::before, *::after {
@@ -60,13 +60,13 @@ button {
 }
 
 button:hover {
-  background: #2d3748;
+  background: #eff6ff;
   border-color: var(--accent-blue);
 }
 
 button.active {
   background: var(--accent-blue);
-  color: #000;
+  color: #fff;
   border-color: var(--accent-blue);
 }
 
@@ -101,7 +101,7 @@ input[type='range']::-moz-range-thumb {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 

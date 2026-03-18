@@ -77,7 +77,7 @@ export default function CircleDragInput({
         className={styles.svg}
       >
         {/* Background circle */}
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#2a3a4a" strokeWidth={1.5} />
+        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#c5cfe8" strokeWidth={1.5} />
 
         {/* Tick marks */}
         {Array.from({ length: 12 }, (_, i) => {
@@ -88,13 +88,13 @@ export default function CircleDragInput({
               key={i}
               x1={cx + inner * Math.cos(a)} y1={cy + inner * Math.sin(a)}
               x2={cx + r * Math.cos(a)} y2={cy + r * Math.sin(a)}
-              stroke="#3a4a5a" strokeWidth={1}
+              stroke="#c5cfe8" strokeWidth={1}
             />
           );
         })}
 
         {/* Center dot */}
-        <circle cx={cx} cy={cy} r={3} fill="#3a4a5a" />
+        <circle cx={cx} cy={cy} r={3} fill="#9ca3af" />
 
         {/* Interpolation arc */}
         {handles.length >= 2 && interpolatedAngle !== undefined && (
@@ -102,7 +102,7 @@ export default function CircleDragInput({
             <path
               d={buildArc(handles[0].angle, handles[1].angle)}
               fill="none"
-              stroke="rgba(81,207,102,0.3)"
+              stroke="rgba(22,163,74,0.25)"
               strokeWidth={3}
               strokeDasharray="6 3"
             />
@@ -132,14 +132,14 @@ export default function CircleDragInput({
                 x1={cx} y1={cy}
                 x2={cx + r * Math.cos(interpolatedAngle)}
                 y2={cy + r * Math.sin(interpolatedAngle)}
-                stroke="#51cf66"
+                stroke="#16a34a"
                 strokeWidth={2.5}
               />
               <circle
                 cx={cx + r * Math.cos(interpolatedAngle)}
                 cy={cy + r * Math.sin(interpolatedAngle)}
                 r={5}
-                fill="#51cf66"
+                fill="#16a34a"
                 opacity={0.8}
               />
             </>

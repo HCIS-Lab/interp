@@ -7,7 +7,7 @@
 .svg {
   display: block;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #0e1620 60%, #0a0f1a 100%);
+  background: radial-gradient(circle at center, #f0f4ff 60%, #e8eeff 100%);
   border: 1px solid var(--border);
   border-radius: 8px;
   touch-action: none;

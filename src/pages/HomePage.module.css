@@ -113,7 +113,7 @@
 
 .card:hover {
   border-color: var(--card-color, var(--accent-blue));
-  background: #1e2a3a;
+  background: #f5f7ff;
   transform: translateY(-2px);
   text-decoration: none;
 }

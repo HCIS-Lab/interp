@@ -125,10 +125,10 @@ export default function SE3Scene({ X0, X1, Xs, onX0Change, onX1Change, overlayXs
       </Scene3D>
 
       <div style={{ display: 'flex', gap: 8, marginTop: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-        <button onClick={() => setActiveTarget('start')} style={{ borderColor: '#4a9eff', color: activeTarget === 'start' ? '#000' : '#4a9eff', background: activeTarget === 'start' ? '#4a9eff' : undefined }}>
+        <button onClick={() => setActiveTarget('start')} style={{ borderColor: '#4a9eff', color: activeTarget === 'start' ? '#fff' : '#4a9eff', background: activeTarget === 'start' ? '#4a9eff' : undefined }}>
           Gizmo: Start
         </button>
-        <button onClick={() => setActiveTarget('end')} style={{ borderColor: '#ff6b6b', color: activeTarget === 'end' ? '#000' : '#ff6b6b', background: activeTarget === 'end' ? '#ff6b6b' : undefined }}>
+        <button onClick={() => setActiveTarget('end')} style={{ borderColor: '#ff6b6b', color: activeTarget === 'end' ? '#fff' : '#ff6b6b', background: activeTarget === 'end' ? '#ff6b6b' : undefined }}>
           Gizmo: End
         </button>
         <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>|</span>

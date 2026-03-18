@@ -21,7 +21,7 @@ export default function Scene3D({ children, height = 460 }: Props) {
         <directionalLight position={[-5, 5, -5]} intensity={0.3} />
 
         {/* Simple grid */}
-        <gridHelper args={[10, 10, '#2a3a4a', '#2a3a4a']} />
+        <gridHelper args={[10, 10, '#c5cfe8', '#d9e0f5']} />
 
         {/* World axes */}
         <axesHelper args={[2]} />
