@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent-blue);
+  min-width: 50px;
+  text-align: right;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider {
+  flex: 1;
+}
+
+.playBtn {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  min-width: 36px;
+}
+
+.active {
+  background: var(--accent-blue);
+  color: #000;
+}

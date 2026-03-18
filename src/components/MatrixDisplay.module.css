@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.matrixWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.bracket {
+  font-size: 2em;
+  line-height: 1;
+  color: var(--text-secondary);
+  font-weight: 100;
+  align-self: center;
+}
+
+.grid {
+  display: grid;
+  gap: 2px 8px;
+}
+
+.cell {
+  text-align: right;
+  color: var(--text-primary);
+  min-width: 60px;
+  padding: 1px 2px;
+}

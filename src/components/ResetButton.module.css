@@ -1,0 +1,9 @@
+.btn {
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+.btn:hover {
+  color: var(--accent-red);
+  border-color: var(--accent-red);
+}
