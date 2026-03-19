@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# 🎯 interp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Interactive visualization and exploration of advanced interpolation techniques in robotics and 3D graphics**
 
-Currently, two official plugins are available:
+[![Built with React](https://img.shields.io/badge/React-18-61dafb?logo=react)](https://react.dev)
+[![Built with Three.js](https://img.shields.io/badge/Three.js-r128-black?logo=three.js)](https://threejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)](https://www.typescriptlang.org)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project provides beautiful, interactive demos for exploring interpolation on **SO(2)** (2D rotations), **SO(3)** (3D rotations), and **SE(3)** (3D rigid transformations). Perfect for learning rotational mathematics, comparing interpolation methods, and visualizing complex spatial concepts.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive 3D Visualization** – Real-time 3D rendering with mouse-controlled transformations
+- **Multiple Interpolation Methods** – Compare different interpolation techniques (NLERP, SLERP, scLERP, Dual Quaternion, etc.)
+- **Multiple Representations** – Explore SO(2), SO(3) matrices, quaternions, and SE(3) transformations
+- **Smooth Animation** – Animated interpolation playback with adjustable speed
+- **Drag-based Control** – Intuitive circular drag input for angle and rotation manipulation
+- **Educational Focus** – Learn the mathematics behind rotation and transformation interpolation
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+- **Node.js** 20+
+- **pnpm** (or npm/yarn)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation & Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Install dependencies
+pnpm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server (http://localhost:5173)
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build locally
+pnpm preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 GitHub Pages Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This repository includes automated CI/CD through GitHub Actions that deploys to GitHub Pages on every push to `main`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Setup (one-time):**
+1. Go to your repository **Settings > Pages**
+2. Under "Build and deployment", select **GitHub Actions** as the source
+3. Save the settings
+
+After that, every push to `main` automatically publishes your updates! 🚀
+
+**Details:**
+- Workflow file: `.github/workflows/deploy-pages.yml`
+- Build output: `dist/`
+- Base path configuration: `vite.config.ts`
+
+## 📝 Configuration
+
+> **Note:** Vite is configured to use `/interp/` as the base path for GitHub Pages builds to ensure static assets resolve correctly. Local development still runs at `/`.
+
+If you rename the repository, update the base path in [vite.config.ts](vite.config.ts).
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** React 18 + TypeScript
+- **3D Graphics:** Three.js
+- **Build Tool:** Vite
+- **Styling:** CSS Modules
+- **Math Libraries:** Custom implementations of quaternion, SE(3), SO(3) math
+
+## 📚 Learning Resources
+
+This project is ideal for:
+- **Students** learning rotational mathematics and Lie groups
+- **Roboticists** seeking to understand transformation interpolation
+- **Graphics Developers** exploring quaternion-based rotation techniques
+- **Anyone curious** about advanced interpolation methods
+
+## 📄 License
+
+Check the repository for [license](LICENSE) details.
